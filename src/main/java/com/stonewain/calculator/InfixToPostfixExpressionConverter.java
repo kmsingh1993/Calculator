@@ -5,6 +5,8 @@ import java.util.LinkedList;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;
 
+import com.stonewain.operator.Operator;
+
 @Component
 public class InfixToPostfixExpressionConverter {
 	StringToListParser stringToListParser;
@@ -21,7 +23,7 @@ public class InfixToPostfixExpressionConverter {
 			if (topOfOperatorStack instanceof String && topOfOperatorStack.equals("(")) {
 				return;
 			}
-			outputList.addLast((BinaryOperator) topOfOperatorStack);
+			outputList.addLast((Operator) topOfOperatorStack);
 		}
 		throw new Exception("Unopened ( bracket");
 	}

@@ -6,6 +6,8 @@ import java.util.NoSuchElementException;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;
 
+import com.stonewain.operator.Operator;
+
 @Component
 public class PostfixExpressionEvaluator {
 

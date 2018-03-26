@@ -1,17 +1,19 @@
-package com.stonewain.calculator;
+package com.stonewain.operator;
 
 import org.springframework.stereotype.Component;
 
-@Component
-public class AddOperator extends BinaryOperator {
+import com.stonewain.calculator.InputFactory;
 
-	public AddOperator(InputFactory inputFactory) {
+@Component
+public class SquareOperator extends BinaryOperator {
+
+	public SquareOperator(InputFactory inputFactory) {
 		super(inputFactory);
 	}
 
 	@Override
 	public float performCalc() {
-		return firstParameter + secondParameter;
+		return (float) Math.pow(firstParameter, secondParameter);
 	}
 
 	@Override
@@ -19,16 +21,16 @@ public class AddOperator extends BinaryOperator {
 		if (operands.length != getNumOperands()) {
 			throw new Exception ("Wrong number of operands provided");
 		}
-		return operands[0] + operands[1];
+		return (float) Math.pow(operands[0], operands[1]);
 	}
 
 	@Override
 	public String getAssociativity() {
-		return "left";
+		return "right";
 	}
-	
+
 	@Override
 	public int getPrecedenceLevel() {
-		return 0;
+		return 2;
 	}
 }

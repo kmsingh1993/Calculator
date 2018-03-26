@@ -1,17 +1,19 @@
-package com.stonewain.calculator;
+package com.stonewain.operator;
 
 import org.springframework.stereotype.Component;
 
-@Component
-public class DivideOperator extends BinaryOperator{
+import com.stonewain.calculator.InputFactory;
 
-	public DivideOperator(InputFactory inputFactory) {
+@Component
+public class AddOperator extends BinaryOperator {
+
+	public AddOperator(InputFactory inputFactory) {
 		super(inputFactory);
 	}
 
 	@Override
 	public float performCalc() {
-		return firstParameter/secondParameter;
+		return firstParameter + secondParameter;
 	}
 
 	@Override
@@ -19,7 +21,7 @@ public class DivideOperator extends BinaryOperator{
 		if (operands.length != getNumOperands()) {
 			throw new Exception ("Wrong number of operands provided");
 		}
-		return operands[0] / operands[1];
+		return operands[0] + operands[1];
 	}
 
 	@Override
@@ -29,6 +31,6 @@ public class DivideOperator extends BinaryOperator{
 	
 	@Override
 	public int getPrecedenceLevel() {
-		return 1;
+		return 0;
 	}
 }

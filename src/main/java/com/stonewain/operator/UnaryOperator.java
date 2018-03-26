@@ -1,4 +1,6 @@
-package com.stonewain.calculator;
+package com.stonewain.operator;
+
+import com.stonewain.calculator.InputFactory;
 
 public abstract class UnaryOperator extends BaseOperator {
 	protected float parameter;

@@ -1,6 +1,8 @@
-package com.stonewain.calculator;
+package com.stonewain.operator;
 
 import org.springframework.stereotype.Component;
+
+import com.stonewain.calculator.InputFactory;
 
 @Component
 public class LogOperator extends UnaryOperator{

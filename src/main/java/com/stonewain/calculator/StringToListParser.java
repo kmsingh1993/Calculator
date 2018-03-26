@@ -7,6 +7,8 @@ import java.util.regex.Pattern;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;
 
+import com.stonewain.operator.OperatorFactory;
+
 @Component
 public class StringToListParser {
 	private OperatorFactory operatorFactory;

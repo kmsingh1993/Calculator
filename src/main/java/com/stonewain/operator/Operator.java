@@ -1,4 +1,4 @@
-package com.stonewain.calculator;
+package com.stonewain.operator;
 
 public interface Operator {	
 	public String getAssociativity();

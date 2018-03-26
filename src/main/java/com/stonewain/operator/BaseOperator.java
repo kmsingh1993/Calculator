@@ -1,6 +1,8 @@
-package com.stonewain.calculator;
+package com.stonewain.operator;
 
 import java.util.Objects;
+
+import com.stonewain.calculator.InputFactory;
 
 public abstract class BaseOperator implements Operator {
 	InputFactory inputFactory;
