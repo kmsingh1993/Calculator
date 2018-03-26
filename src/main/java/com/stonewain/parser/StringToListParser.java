@@ -1,4 +1,4 @@
-package com.stonewain.calculator;
+package com.stonewain.parser;
 
 import java.util.LinkedList;
 import java.util.regex.Matcher;
@@ -7,6 +7,7 @@ import java.util.regex.Pattern;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;
 
+import com.stonewain.calculator.AppConfig;
 import com.stonewain.operator.OperatorFactory;
 
 @Component

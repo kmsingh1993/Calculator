@@ -6,7 +6,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan({ "com.stonewain.calculator", "com.stonewain.operator" })
+@ComponentScan({ "com.stonewain.calculator", "com.stonewain.operator", "com.stonewain.parser" })
 public class AppConfig {
 	@Bean
 	public Scanner scanner() {

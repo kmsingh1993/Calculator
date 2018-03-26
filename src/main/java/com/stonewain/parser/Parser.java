@@ -1,4 +1,4 @@
-package com.stonewain.calculator;
+package com.stonewain.parser;
 
 import java.util.LinkedList;
 

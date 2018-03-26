@@ -1,4 +1,4 @@
-package com.stonewain.calculator;
+package com.stonewain.parser;
 
 import java.util.LinkedList;
 import java.util.NoSuchElementException;
@@ -6,6 +6,7 @@ import java.util.NoSuchElementException;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;
 
+import com.stonewain.calculator.AppConfig;
 import com.stonewain.operator.Operator;
 
 @Component
