@@ -19,7 +19,7 @@ public class AddOperator extends BinaryOperator {
 	@Override
 	public float performCalc(float[] operands) throws Exception {
 		if (operands.length != getNumOperands()) {
-			throw new Exception ("Wrong number of operands provided");
+			throw new Exception("Wrong number of operands provided");
 		}
 		return operands[0] + operands[1];
 	}
@@ -28,9 +28,14 @@ public class AddOperator extends BinaryOperator {
 	public String getAssociativity() {
 		return "left";
 	}
-	
+
 	@Override
 	public int getPrecedenceLevel() {
 		return 0;
+	}
+
+	@Override
+	public String getSymbol() {
+		return "+";
 	}
 }

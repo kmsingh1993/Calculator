@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import com.stonewain.calculator.InputFactory;
 
 @Component
-public class MultiplyOperator extends BinaryOperator{
+public class MultiplyOperator extends BinaryOperator {
 	public MultiplyOperator(InputFactory inputFactory) {
 		super(inputFactory);
 	}
@@ -18,7 +18,7 @@ public class MultiplyOperator extends BinaryOperator{
 	@Override
 	public float performCalc(float[] operands) throws Exception {
 		if (operands.length != getNumOperands()) {
-			throw new Exception ("Wrong number of operands provided");
+			throw new Exception("Wrong number of operands provided");
 		}
 		return operands[0] * operands[1];
 	}
@@ -31,5 +31,10 @@ public class MultiplyOperator extends BinaryOperator{
 	@Override
 	public int getPrecedenceLevel() {
 		return 1;
+	}
+
+	@Override
+	public String getSymbol() {
+		return "*";
 	}
 }

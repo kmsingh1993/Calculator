@@ -23,7 +23,7 @@ public class PostfixExpressionEvaluator {
 				float[] operandArray = new float[operator.getNumOperands()];
 				try {
 					for (int j = 1; j <= operator.getNumOperands(); j++) {
-						operandArray[operator.getNumOperands()-j] = ((float) postfixString.remove(i - j));
+						operandArray[operator.getNumOperands() - j] = ((float) postfixString.remove(i - j));
 					}
 				}
 				// Specifically catch out of bounds exception
@@ -40,7 +40,7 @@ public class PostfixExpressionEvaluator {
 	}
 
 	public static void main(String[] args) throws Exception {
-		try (AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class)){
+		try (AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class)) {
 			InfixToPostfixExpressionConverter converter = ctx.getBean(InfixToPostfixExpressionConverter.class);
 			PostfixExpressionEvaluator evaluator = ctx.getBean(PostfixExpressionEvaluator.class);
 			LinkedList<Object> output = converter.convertToPostfixString(" 10-4 * 2/ (1    / 5) ^(2)");

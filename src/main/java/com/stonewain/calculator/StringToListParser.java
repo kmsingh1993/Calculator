@@ -43,7 +43,7 @@ public class StringToListParser {
 				output.addLast(operatorFactory.getOperatorInstance(token));
 				continue;
 			} catch (Exception e) {
-				//then it's just a string - for example left right brackets
+				// then it's just a string - for example left right brackets
 			}
 			output.addLast((String) token);
 		}

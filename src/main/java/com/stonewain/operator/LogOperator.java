@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import com.stonewain.calculator.InputFactory;
 
 @Component
-public class LogOperator extends UnaryOperator{
+public class LogOperator extends UnaryOperator {
 
 	public LogOperator(InputFactory inputFactory) {
 		super(inputFactory);
@@ -15,11 +15,6 @@ public class LogOperator extends UnaryOperator{
 	@Override
 	public String getAssociativity() {
 		return "left";
-	}
-
-	@Override
-	public int getNumOperands() {
-		return 1;
 	}
 
 	@Override
@@ -35,9 +30,13 @@ public class LogOperator extends UnaryOperator{
 	@Override
 	public float performCalc(float[] operands) throws Exception {
 		if (operands.length != getNumOperands()) {
-			throw new Exception ("Wrong number of operands provided");
+			throw new Exception("Wrong number of operands provided");
 		}
 		return (float) Math.log10(operands[0]);
 	}
 
+	@Override
+	public String getSymbol() {
+		return "log";
+	}
 }
