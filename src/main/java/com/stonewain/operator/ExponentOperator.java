@@ -5,9 +5,9 @@ import org.springframework.stereotype.Component;
 import com.stonewain.calculator.InputFactory;
 
 @Component
-public class SquareOperator extends BinaryOperator {
+public class ExponentOperator extends BinaryOperator {
 
-	public SquareOperator(InputFactory inputFactory) {
+	public ExponentOperator(InputFactory inputFactory) {
 		super(inputFactory);
 	}
 

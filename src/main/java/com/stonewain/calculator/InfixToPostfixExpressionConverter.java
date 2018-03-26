@@ -53,7 +53,6 @@ public class InfixToPostfixExpressionConverter {
 
 		for (int i = 0; i < infixList.size(); i++) {
 			Object token = infixList.get(i);
-
 			if (token instanceof Float) {
 				outputList.addLast(token);
 			} else if (token instanceof String) {
